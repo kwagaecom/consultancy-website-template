@@ -104,7 +104,7 @@
 
 
     <!-- Features Start -->
-    <div class="container-fluid py-6 px-5">
+  <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 mb-0">Why Choose Us!!!</h1>
             <hr class="w-25 mx-auto bg-primary">
@@ -117,21 +117,21 @@
                             <i class="fa fa-cubes fs-4 text-white"></i>
                         </div>
                         <h3>Best In Industry</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Exceeding Expectations: Setting the benchmark for excellence with industry-leading solutions tailored to your needs."</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-percent fs-4 text-white"></i>
                         </div>
                         <h3>99% Success Rate</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Proven Performance: Achieving a remarkable 99% success rate in delivering results that matter most to our clients."</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-award fs-4 text-white"></i>
                         </div>
                         <h3>Award Winning</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Recognized Excellence: Honored with prestigious awards for our outstanding contributions and innovative solutions."</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                 <div class="d-block bg-primary h-100 text-center">
                     <img class="img-fluid" src="img/feature.jpg" alt="">
                     <div class="p-4">
-                        <p class="text-white mb-4">Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                        <p class="text-white mb-4">"At the heart of our consultancy website is a customer-centric approach, where every interaction, solution, and strategy is meticulously crafted to address your unique needs and aspirations. We prioritize your satisfaction and success, ensuring that each step of your journey is guided by personalized attention and unwavering support."</p>
                         <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
                     </div>
                 </div>
@@ -151,21 +151,21 @@
                             <i class="far fa-smile-beam fs-4 text-white"></i>
                         </div>
                         <h3>100% Happy Client</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Client-Centric Excellence: Ensuring 100% client satisfaction by prioritizing their needs and exceeding expectations at every turn."</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-user-tie fs-4 text-white"></i>
                         </div>
                         <h3>Professional Advisors</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Expert Guidance: Accessing top-tier expertise and insight from our team of seasoned professionals dedicated to your success."</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-headset fs-4 text-white"></i>
                         </div>
                         <h3>24/7 Customer Support</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">"Round-the-Clock Assistance: Providing continuous support and assistance whenever you need it, ensuring peace of mind and timely resolutions."</p>
                     </div>
                 </div>
             </div>
@@ -175,17 +175,42 @@
     
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-secondary p-5">
+   <div class="container-fluid bg-primary text-secondary p-5">
         <div class="row g-5">
             <div class="col-12 text-center">
                 <h1 class="display-5 mb-4">Stay Update!!!</h1>
-                <form class="mx-auto" style="max-width: 600px;">
+                <form id="contactForm-1" class="mx-auto" style="max-width: 600px;">
                     <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark px-4">Sign Up</button>
+                        <input type="email" class="form-control border-white p-3" name="Your Email">
+                        <button class="btn btn-dark px-4">Submit</button>
                     </div>
                 </form>
             </div>
+ <script>
+    // JavaScript to handle form submission
+    document.getElementById("contactForm-1").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(event.target);
+        const email = 'kwagaecom@gmail.com'; // Your Gmail address
+        const subject = 'Subscriber Submission'; // Subject for the email
+
+        let message = "New contact form submission:\n\n";
+
+        // Iterate over form data and append to message
+        for (const [key, value] of formData.entries()) {
+            message += `${key}: ${value}\n`;
+        }
+
+        // Create a "mailto" URL with the pre-filled email subject and body
+        const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+
+        // Open the default email client with the pre-filled email
+        window.location.href = mailtoURL;
+
+        // You can also display a success message or redirect the user to a thank-you page
+    });
+</script>
         </div>
     </div>
     <div class="container-fluid bg-dark text-secondary p-5">
@@ -203,18 +228,18 @@
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Popular Links</h3>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
-                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Cloud </a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>BlockChain</a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>IOT</a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Health & Wellness</a>
+                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Cuber Security</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Get In Touch</h3>
                 <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>consult@consultancy.com</p>
+                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 6789</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Follow Us</h3>
@@ -228,7 +253,7 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">Your Site Name</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">Consult</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://www.kwaga.in/">KWAGA TEAM</a></p>
     </div>
     <!-- Footer End -->
 
